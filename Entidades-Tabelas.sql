@@ -1,64 +1,121 @@
-CREATE TABLE  Jogo
+/*Criar tabelas do banco de dados da steam*/
+
+CREATE TABLE Usu√°rio
 (
-JogoID						VARCHAR(30)			NOT NULL,
-PreÁoJogo					FLOAT				NOT NULL,
-DescriÁ„o					VARCHAR (300)		NOT NULL,
-NomeJogo					VARCHAR (30)		NOT NULL,
-DataDeLanÁamento			DATE				NOT NULL,
-Requisitos					VARCHAR (30)		NOT NULL,
-ClassificaÁ„oIndicativa		INT					NOT NULL,
-An·liseRecente				VARCHAR(300)		NOT NULL,
-An·liseGeral				VARCHAR(300)		NOT NULL,
-PRIMARY KEY (JogoID) 
+  Usu√°rioID VARCHAR(30) NOT NULL,
+  NomePerfil VARCHAR(30) NOT NULL,
+  NomeReal VARCHAR(30) NOT NULL,
+  Munic√≠pio VARCHAR(30),
+  Estado VARCHAR(30),
+  Pa√≠s VARCHAR(30),
+  FotoDePerfil VARCHAR(300),
+  Resumo VARCHAR(300),
+  PRIMARY KEY (Usu√°rioID)
+);
+
+CREATE TABLE Categoria
+(
+  CategoriaID VARCHAR(30) NOT NULL,
+  NomeCategoria VARCHAR(30) NOT NULL,
+  PRIMARY KEY (CategoriaID)
+);
+
+CREATE TABLE Conte√∫do
+(
+  Conte√∫doID VARCHAR(30) NOT NULL,
+  Conte√∫doT√≠tulo VARCHAR(30) NOT NULL,
+  Conte√∫doTamanho VARCHAR(30) NOT NULL,
+  NumVisualiza√ß√µes VARCHAR(300),
+  PRIMARY KEY (Conte√∫doID)
+);
+
+CREATE TABLE Curte
+(
+  Usu√°rioID VARCHAR(30) NOT NULL,
+  Conte√∫doID VARCHAR(30) NOT NULL,
+  PRIMARY KEY (Usu√°rioID, Conte√∫doID),
+  FOREIGN KEY (Usu√°rioID) REFERENCES Usu√°rio(Usu√°rioID),
+  FOREIGN KEY (Conte√∫doID) REFERENCES Conte√∫do(Conte√∫doID)
+);
+
+CREATE TABLE BibliotecaDeJogos
+(
+  Usu√°rioID VARCHAR(30) NOT NULL,
+  JogoID VARCHAR(30) NOT NULL,
+  PRIMARY KEY (Usu√°rioID, JogoID),
+  FOREIGN KEY (Usu√°rioID) REFERENCES Usu√°rio(Usu√°rioID),
+  FOREIGN KEY (JogoID) REFERENCES Jogo(JogoID)
+);
+
+CREATE TABLE ListaDeDesejos
+(
+  Usu√°rioID VARCHAR(30) NOT NULL,
+  JogoID VARCHAR(30) NOT NULL,
+  PRIMARY KEY (Usu√°rioID, JogoID),
+  FOREIGN KEY (Usu√°rioID) REFERENCES Usu√°rio(Usu√°rioID),
+  FOREIGN KEY (JogoID) REFERENCES Jogo(JogoID)
+);
+
+CREATE TABLE Jogo
+(
+  JogoID VARCHAR(30) NOT NULL,
+  Pre√ßoJogo FLOAT NOT NULL,
+  Descri√ß√£o VARCHAR(300) NOT NULL,
+  NomeJogo VARCHAR(30) NOT NULL,
+  DataDeLan√ßamento DATE	NOT NULL,
+  Requisitos VARCHAR(30) NOT NULL,
+  Classifica√ß√£oIndicativa INT NOT NULL,
+  An√°liseRecente VARCHAR(300) NOT NULL,
+  An√°liseGeral VARCHAR(300) NOT NULL,
+  PRIMARY KEY (JogoID) 
 );
 
 CREATE TABLE Empresa
 (
-EmpresaID VARCHAR (30) NOT NULL,
-NomeEmpresa VARCHAR (30) NOT NULL,
-NumSeguidores INT,
-PRIMARY KEY (EmpresaID)
+  EmpresaID VARCHAR(30) NOT NULL,
+  NomeEmpresa VARCHAR(30) NOT NULL,
+  NumSeguidores INT,
+  PRIMARY KEY (EmpresaID)
 );
 
 CREATE TABLE ItemJogo
 (
-ItemID				VARCHAR (30)		NOT NULL,
-ValorItem			INT					NOT NULL,
-NomeItem			VARCHAR (30)		NOT NULL,
-PRIMARY KEY (ItemID)
+  ItemID VARCHAR(30) NOT NULL,
+  ValorItem INT NOT NULL,
+  NomeItem VARCHAR(30) NOT NULL,
+  PRIMARY KEY (ItemID)
 );
 
-CREATE TABLE NotÌcia
+CREATE TABLE Not√≠cia
 (
-NotÌciaID					VARCHAR (30)		NOT NULL,
-Assunto						VARCHAR (30)		NOT NULL,
-NotÌciaAssunto				VARCHAR (30)		NOT NULL,
-NumInteraÁıes				INT					NOT NULL,
-DataPublicaÁ„o				DATE				NOT NULL
-PRIMARY KEY (NotÌciaID)
+  Not√≠ciaID VARCHAR(30) NOT NULL,
+  Assunto VARCHAR(30) NOT NULL,
+  Not√≠ciaAssunto VARCHAR(30) NOT NULL,
+  NumIntera√ß√µes INT NOT NULL,
+  DataPublica√ß√£o DATE NOT NULL
+  PRIMARY KEY (Not√≠ciaID)
 );
 
-CREATE TABLE AvaliaÁ„o
+CREATE TABLE Avalia√ß√£o
 (
-AvaliaÁ„oConte˙do			VARCHAR(30)			NOT NULL,
-DataAvaliaÁ„o				DATE				NOT NULL,
-InteraÁıesPositivas			INT,
-InteraÁıesNegativas			INT
+  Avalia√ß√£oConte√∫do VARCHAR(30) NOT NULL,
+  DataAvalia√ß√£o DATE NOT NULL,
+  Intera√ß√µesPositivas INT,
+  Intera√ß√µesNegativas INT
 );
 
-CREATE TABLE AQUISI«√O
+CREATE TABLE Aquisi√ß√£o
 (
-AquisiÁ„oID				VARCHAR(30)			NOT NULL,
-PreÁoAquisiÁ„o			FLOAT				NOT NULL,
-DataAquisiÁ„o			DATE				NOT NULL,
-Desconto				FLOAT,
-PRIMARY KEY (AquisiÁ„oID)
+  Aquisi√ß√£oID VARCHAR(30) NOT NULL,
+  Pre√ßoAquisi√ß√£o FLOAT NOT NULL,
+  DataAquisi√ß√£o DATE NOT NULL,
+  Desconto FLOAT,
+  PRIMARY KEY (Aquisi√ß√£oID)
 )
 
-CREATE TABLE GÍnero
+CREATE TABLE G√™nero
 (
-GÍneroID		VARCHAR(30)		NOT NULL,
-GÍneroNome		VARCHAR(30)		NOT NULL,
-PRIMARY KEY (GÍneroID)
-
+  G√™neroID VARCHAR(30) NOT NULL,
+  G√™neroNome VARCHAR(30) NOT NULL,
+  PRIMARY KEY (G√™neroID)
 )
