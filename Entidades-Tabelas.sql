@@ -38,6 +38,20 @@ CREATE TABLE Curte
   FOREIGN KEY (ConteúdoID) REFERENCES Conteúdo(ConteúdoID)
 );
 
+CREATE TABLE Jogo
+(
+  JogoID VARCHAR(30) NOT NULL,
+  PreçoJogo FLOAT NOT NULL,
+  Descrição VARCHAR(300) NOT NULL,
+  NomeJogo VARCHAR(30) NOT NULL,
+  DataDeLançamento DATE	NOT NULL,
+  Requisitos VARCHAR(30) NOT NULL,
+  ClassificaçãoIndicativa INT NOT NULL,
+  AnáliseRecente VARCHAR(300) NOT NULL,
+  AnáliseGeral VARCHAR(300) NOT NULL,
+  PRIMARY KEY (JogoID) 
+);
+
 CREATE TABLE BibliotecaDeJogos
 (
   UsuárioID VARCHAR(30) NOT NULL,
@@ -54,20 +68,6 @@ CREATE TABLE ListaDeDesejos
   PRIMARY KEY (UsuárioID, JogoID),
   FOREIGN KEY (UsuárioID) REFERENCES Usuário(UsuárioID),
   FOREIGN KEY (JogoID) REFERENCES Jogo(JogoID)
-);
-
-CREATE TABLE Jogo
-(
-  JogoID VARCHAR(30) NOT NULL,
-  PreçoJogo FLOAT NOT NULL,
-  Descrição VARCHAR(300) NOT NULL,
-  NomeJogo VARCHAR(30) NOT NULL,
-  DataDeLançamento DATE	NOT NULL,
-  Requisitos VARCHAR(30) NOT NULL,
-  ClassificaçãoIndicativa INT NOT NULL,
-  AnáliseRecente VARCHAR(300) NOT NULL,
-  AnáliseGeral VARCHAR(300) NOT NULL,
-  PRIMARY KEY (JogoID) 
 );
 
 CREATE TABLE Empresa
