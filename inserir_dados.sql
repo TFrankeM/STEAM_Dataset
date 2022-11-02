@@ -15,3 +15,21 @@ INSERT INTO Jogo VALUES('J0002', 87.20, 'Tem o Mickey', 'Final Fantasy VI', '201
 INSERT INTO BibliotecaDeJogos VALUES('U001', 'J0001');
 
 INSERT INTO ListaDeDesejos VALUES('U001', 'J0002');
+
+INSERT INTO Empresa VALUES ('E03', 'Blizzard', 200000);
+
+INSERT INTO ItemJogo VALUES ('IA1234', 0.27, 'Medalha do Conquistador');
+
+INSERT INTO Notícia VALUES ('N2', 'Warframe', 'Concurso de Inverno no Warframe', 123, 2020-01-23);
+
+INSERT INTO Aquisição VALUES ('CPP123', 120.5, 10);
+
+INSERT INTO Gênero VALUES ('G1', 'Terror');
+
+INSERT INTO Fórum VALUES ('TTT2', 15, 'Como comer carne no gta', 'PlayerNoob002');
+
+INSERT INTO Comentário VALUES ('TTT2', 'TTT21', 'PlayerNoob200', 2020-03-23);
+
+INSERT INTO Suporte VALUES ('U001', 'S01', 'José Carneiro', 'Meu fall guys está crashando');
+
+INSERT INTO Desenvolvedora VALUES ('D1', 'Stonehold', 11412)
