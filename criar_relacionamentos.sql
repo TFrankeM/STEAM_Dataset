@@ -1,0 +1,68 @@
+CREATE TABLE Curte
+(
+	UsuárioID VARCHAR(30) NOT NULL,
+	ConteúdoID VARCHAR(30) NOT NULL,
+	PRIMARY KEY (UsuárioID, ConteúdoID),
+	FOREIGN KEY (UsuárioID) REFERENCES Usuário(UsuárioID),
+	FOREIGN KEY (ConteúdoID) REFERENCES Conteúdo(ConteúdoID)
+);
+
+CREATE TABLE InterageEm
+(
+	UsuárioID VARCHAR(30) NOT NULL,
+	FórumID VARCHAR(30),
+	PRIMARY KEY (UsuárioID, FórumID),
+	FOREIGN KEY (UsuárioID) REFERENCES Usuário(UsuárioID),
+	FOREIGN KEY (FórumID) REFERENCES Fórum(FórumID)
+);
+
+CREATE TABLE Lê
+(
+	UsuárioID VARCHAR(30) NOT NULL,
+	NotíciaID VARCHAR(30) NOT NULL,
+	PRIMARY KEY (UsuárioID, NotíciaID),
+	FOREIGN KEY (UsuárioID) REFERENCES Usuário(UsuárioID),
+	FOREIGN KEY (NotíciaID) REFERENCES Notícia(NotíciaID)
+);
+
+CREATE TABLE InformeSobre
+(
+	NotíciaID VARCHAR(30) NOT NULL,
+	JogoID VARCHAR(30) NOT NULL,
+	FOREIGN KEY (NotíciaID) REFERENCES Notícia(NotíciaID),
+	FOREIGN KEY (JogoID) REFERENCES Jogo(JogoID)
+)
+
+CREATE TABLE Desenvolve
+(
+	JogoID VARCHAR(30) NOT NULL,
+	DesenvolvedorID VARCHAR(30) NOT NULL,
+	FOREIGN KEY (JogoID) REFERENCES Jogo(JogoID),
+	FOREIGN KEY (DesenvolvedorID) REFERENCES Desenvolvedora(DesenvolvedorID)
+)
+
+CREATE TABLE Inclui
+(
+	JogoID VARCHAR(30) NOT NULL,
+	AquisiçãoID VARCHAR(30) NOT NULL,
+	FOREIGN KEY (JogoID) REFERENCES Jogo(JogoID),
+	FOREIGN KEY (AquisiçãoID) REFERENCES Aquisição(AquisiçãoID)
+)
+
+CREATE TABLE ClassificadoComo
+(
+	JogoID VARCHAR(30) NOT NULL,
+	GêneroID VARCHAR(30) NOT NULL,
+	FOREIGN KEY (JogoID) REFERENCES Jogo(JogoID),
+	FOREIGN KEY (GêneroID) REFERENCES Gênero(GêneroID)
+)
+
+
+CREATE TABLE Joga
+(
+	JogoID VARCHAR(30) NOT NULL,
+	UsuárioID VARCHAR(30) NOT NULL,
+	FOREIGN KEY (JogoID) REFERENCES Jogo(JogoID),
+	FOREIGN KEY (UsuárioID) REFERENCES Usuário(UsuárioID)
+)
+

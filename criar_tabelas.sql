@@ -29,15 +29,6 @@ CREATE TABLE Conteúdo
 	PRIMARY KEY (ConteúdoID)
 );
 
-CREATE TABLE Curte
-(
-	UsuárioID VARCHAR(30) NOT NULL,
-	ConteúdoID VARCHAR(30) NOT NULL,
-	PRIMARY KEY (UsuárioID, ConteúdoID),
-	FOREIGN KEY (UsuárioID) REFERENCES Usuário(UsuárioID),
-	FOREIGN KEY (ConteúdoID) REFERENCES Conteúdo(ConteúdoID)
-);
-
 CREATE TABLE Jogo
 (
 	JogoID VARCHAR(30) NOT NULL,
@@ -138,14 +129,6 @@ CREATE TABLE Comentário
 	FOREIGN KEY (FórumID) REFERENCES Fórum(FórumID)
 );
 
-CREATE TABLE InterageEm
-(
-	UsuárioID VARCHAR(30) NOT NULL,
-	FórumID VARCHAR(30),
-	PRIMARY KEY (UsuárioID, FórumID),
-	FOREIGN KEY (UsuárioID) REFERENCES Usuário(UsuárioID),
-	FOREIGN KEY (FórumID) REFERENCES Fórum(FórumID)
-);
 
 CREATE TABLE Suporte
 (
@@ -157,11 +140,10 @@ CREATE TABLE Suporte
 	FOREIGN KEY (UsuárioID) REFERENCES Usuário(UsuárioID)
 );
 
-CREATE TABLE Lê
+CREATE TABLE Desenvolvedora
 (
-	UsuárioID VARCHAR(30) NOT NULL,
-	NotíciaID VARCHAR(30) NOT NULL,
-	PRIMARY KEY (UsuárioID, NotíciaID),
-	FOREIGN KEY (UsuárioID) REFERENCES Usuário(UsuárioID),
-	FOREIGN KEY (NotíciaID) REFERENCES Notícia(NotíciaID)
-);
+	DesenvolvedorID VARCHAR(30) NOT NULL,
+	NomeDesenvolvedora VARCHAR(30) NOT NULL,
+	NumSeguidores INT 
+	PRIMARY KEY (DesenvolvedorID)
+)
