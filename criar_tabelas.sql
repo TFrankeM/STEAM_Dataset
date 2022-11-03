@@ -85,13 +85,15 @@ CREATE TABLE Notícia
 	PRIMARY KEY (NotíciaID)
 );
 
-/*CREATE TABLE Avaliação
+CREATE TABLE Avaliação
 (
+	AvaliaçãoID VARCHAR(30) NOT NULL
 	AvaliaçãoConteúdo VARCHAR(30) NOT NULL,
 	DataAvaliação DATE NOT NULL,
 	InteraçõesPositivas INT,
 	InteraçõesNegativas INT
-);*/
+	PRIMARY KEY (AvaliaçãoID)
+);
 
 CREATE TABLE Aquisição
 (
