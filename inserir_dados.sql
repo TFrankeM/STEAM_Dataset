@@ -1,6 +1,6 @@
 /*Inserir dados nas tabelas do banco de dados da steam*/
 
-INSERT INTO Usuário VALUES ('U001', 'Salmoura', 'Jorge Silva', 'Tiradentes', 'Minas Gerais', 'Brasil', 'https://www.google.com/imgres?imgurl=https%3A%2F%2Fcharcutaria.org%2Fwp-content%2Fuploads%2F2015%2F04%2Fsalmoura-sal-temperos.jpg&imgrefurl=https%3A%2F%2Fcharcutaria.org%2Fsal%2Fsalmoura-por-equilibrio%2F&tbnid=Mi5LXv20vrs7fM&vet=12ahUKEwiasLTky437AhVWH7kGHXPgCecQMygBegUIARDtAQ..i&docid=wxS7edjFGKu5AM&w=540&h=399&q=salmoura&ved=2ahUKEwiasLTky437AhVWH7kGHXPgCecQMygBegUIARDtAQ', 'Bacon ipsum dolor amet porchetta proident ham pork capicola. Picanha ex labore anim. Ut filet mignon sed sausage brisket tongue ipsum est pig officia rump consectetur bacon voluptate. Tri-tip shank boudin et, alcatra reprehenderit kielbasa chuck mollit pancetta aliqua porchetta. Quis sausage dolore nulla cupidatat incididunt picanha.');
+INSERT INTO Usuário VALUES ('U001', 'Salmoura', 'Jorge Silva', 'Tiradentes', 'Minas Gerais', 'Brasil', 'https://www.google.com/imQ', 'Bacon ipsum dolor amet ');
 
 INSERT INTO Categoria VALUES('CA01', 'Ação');
 
@@ -20,15 +20,15 @@ INSERT INTO Empresa VALUES ('E03', 'Blizzard', 200000);
 
 INSERT INTO ItemJogo VALUES ('IA1234', 0.27, 'Medalha do Conquistador');
 
-INSERT INTO Notícia VALUES ('N2', 'Warframe', 'Concurso de Inverno no Warframe', 123, 2020-01-23);
+INSERT INTO Notícia VALUES ('N2', 'Warframe', 'Concurso de Inverno no Warframe', 123, '2020-01-23');
 
-INSERT INTO Aquisição VALUES ('CPP123', 120.5, 10);
+INSERT INTO Aquisição VALUES ('CPP123', 120.5, '2025-11-25', 10);
 
 INSERT INTO Gênero VALUES ('G1', 'Terror');
 
-INSERT INTO Fórum VALUES ('TTT2', 15, 'Como comer carne no gta', 'PlayerNoob002');
+INSERT INTO Fórum VALUES ('TTT2', 15, 'Como comer carne no gta', '1783-12-17', 'PlayerNoob002');
 
-INSERT INTO Comentário VALUES ('TTT2', 'TTT21', 'PlayerNoob200', 2020-03-23);
+INSERT INTO Comentário VALUES ('TTT2', 'TTT21', 'PlayerNoob200', '2020-03-23', 'gagagavsg');
 
 INSERT INTO Suporte VALUES ('U001', 'S01', 'José Carneiro', 'Meu fall guys está crashando');
 
