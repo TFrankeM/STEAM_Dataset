@@ -7,6 +7,10 @@ from Aquisição
 go
 
 select *
+from Avaliação
+go
+
+select *
 from BibliotecaDeJogos
 go
 
