@@ -20,7 +20,7 @@ INSERT INTO Empresa VALUES ('E03', 'Blizzard', 200000);
 
 INSERT INTO ItemJogo VALUES ('IA1234', 0.27, 'Medalha do Conquistador');
 
-INSERT INTO Notícia VALUES ('N2', 'Warframe', 'Concurso de Inverno no Warframe', 123, '2020-01-23');
+INSERT INTO Notícia VALUES ('N2', 'Warframe', 'Concurso de Inverno', 123, '2020-01-23');
 
 INSERT INTO Aquisição VALUES ('CPP123', 120.5, '2025-11-25', 10);
 
