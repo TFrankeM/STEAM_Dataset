@@ -87,7 +87,7 @@ CREATE TABLE Notícia
 
 CREATE TABLE Avaliação
 (
-	AvaliaçãoID VARCHAR(30) NOT NULL
+	AvaliaçãoID VARCHAR(30) NOT NULL,
 	AvaliaçãoConteúdo VARCHAR(30) NOT NULL,
 	DataAvaliação DATE NOT NULL,
 	InteraçõesPositivas INT,
