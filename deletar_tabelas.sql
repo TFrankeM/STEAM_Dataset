@@ -5,7 +5,7 @@ DROP TABLE Joga;
 DROP TABLE ClassificadoComo;
 DROP TABLE Inclui;
 DROP TABLE Desenvolve;
-DROP TABLE InformeSobre;
+DROP TABLE InformaSobre;
 DROP TABLE Lê;
 DROP TABLE InterageEm;
 DROP TABLE Curte;
