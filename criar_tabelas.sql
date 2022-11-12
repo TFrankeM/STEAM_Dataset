@@ -28,7 +28,7 @@ CREATE TABLE Conteúdo
 	NumVisualizações VARCHAR(300),
 	CategoriaID VARCHAR(30) NOT NULL,
 	PRIMARY KEY (ConteúdoID),
-	FOREIGN KEY (CategoriaID) REFERENCES Categoria(CstegoriaID)
+	FOREIGN KEY (CategoriaID) REFERENCES Categoria(CategoriaID)
 );
 
 CREATE TABLE Jogo
@@ -58,9 +58,7 @@ CREATE TABLE Notícia
 	NotíciaAssunto VARCHAR(30) NOT NULL,
 	NumInterações INT NOT NULL,
 	DataPublicação DATE NOT NULL,
-	CategoriaID VARCHAR(30) NOT NULL,
-	PRIMARY KEY (NotíciaID),
-	FOREIGN KEY (CategoriaID) REFERENCES Categoria(CategoriaID)
+	PRIMARY KEY (NotíciaID)
 );
 
 CREATE TABLE Avaliação
