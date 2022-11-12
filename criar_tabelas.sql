@@ -72,7 +72,11 @@ CREATE TABLE ItemJogo
 	ItemID VARCHAR(30) NOT NULL,
 	ValorItem FLOAT NOT NULL,
 	NomeItem VARCHAR(30) NOT NULL,
-	PRIMARY KEY (ItemID)
+	JogoID VARCHAR(30) NOT NULL,
+	AquisiçãoID VARCHAR(30) NOT NULL,
+	PRIMARY KEY (ItemID),
+	FOREIGN KEY (JogoID) REFERENCES Jogo(JogoID)
+	FOREIGN KEY (AquisiçãoID) REFERENCES Aquisição(AquisiçãoID)
 );
 
 CREATE TABLE Notícia
@@ -81,8 +85,10 @@ CREATE TABLE Notícia
 	Assunto VARCHAR(30) NOT NULL,
 	NotíciaAssunto VARCHAR(30) NOT NULL,
 	NumInterações INT NOT NULL,
-	DataPublicação DATE NOT NULL
-	PRIMARY KEY (NotíciaID)
+	DataPublicação DATE NOT NULL,
+	CategoriaID VARCHAR(30) NOT NULL,
+	PRIMARY KEY (NotíciaID),
+	FOREIGN KEY (CategoriaID) REFERENCES Categoria(CategoriaID)
 );
 
 CREATE TABLE Avaliação
@@ -91,8 +97,10 @@ CREATE TABLE Avaliação
 	AvaliaçãoConteúdo VARCHAR(30) NOT NULL,
 	DataAvaliação DATE NOT NULL,
 	InteraçõesPositivas INT,
-	InteraçõesNegativas INT
-	PRIMARY KEY (AvaliaçãoID)
+	InteraçõesNegativas INT,
+	UsuárioID VARCHAR(39) NOT NULL,
+	PRIMARY KEY (AvaliaçãoID),
+	FOREIGN KEY (UsuárioID) REFERENCES Usuário(UsuárioID)
 );
 
 CREATE TABLE Aquisição
@@ -144,8 +152,8 @@ CREATE TABLE Suporte
 
 CREATE TABLE Desenvolvedora
 (
-	DesenvolvedorID VARCHAR(30) NOT NULL,
-	NomeDesenvolvedora VARCHAR(30) NOT NULL,
+	EmpresaID VARCHAR(30) NOT NULL,
+	NomeEmpresa VARCHAR(30) NOT NULL,
 	NumSeguidores INT 
-	PRIMARY KEY (DesenvolvedorID)
+	PRIMARY KEY (EmpresaID)
 )
