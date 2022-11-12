@@ -32,6 +32,6 @@ INSERT INTO Comentário VALUES ('TTT2', 'TTT21', 'PlayerNoob200', '2020-03-23', 
 
 INSERT INTO Suporte VALUES ('U001', 'S01', 'José Carneiro', 'Meu fall guys está crashando');
 
-INSERT INTO Desenvolvedora VALUES ('D1', 'Stonehold', 11412)
+INSERT INTO Empresa VALUES ('D1', 'Stonehold', 11412)
 
 INSERT INTO Distribui VALUES ('E03', 'J0002')
