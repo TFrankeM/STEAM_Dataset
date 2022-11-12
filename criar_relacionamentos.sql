@@ -31,7 +31,7 @@ CREATE TABLE InformaSobre
 	JogoID VARCHAR(30) NOT NULL,
 	FOREIGN KEY (NotíciaID) REFERENCES Notícia(NotíciaID),
 	FOREIGN KEY (JogoID) REFERENCES Jogo(JogoID)
-)
+);
 
 CREATE TABLE Desenvolve
 (
@@ -39,7 +39,7 @@ CREATE TABLE Desenvolve
 	EmpresaID VARCHAR(30) NOT NULL,
 	FOREIGN KEY (JogoID) REFERENCES Jogo(JogoID),
 	FOREIGN KEY (EmpresaID) REFERENCES Empresa(EmpresaID)
-)
+);
 
 CREATE TABLE Inclui
 (
@@ -47,7 +47,7 @@ CREATE TABLE Inclui
 	AquisiçãoID VARCHAR(30) NOT NULL,
 	FOREIGN KEY (JogoID) REFERENCES Jogo(JogoID),
 	FOREIGN KEY (AquisiçãoID) REFERENCES Aquisição(AquisiçãoID)
-)
+);
 
 CREATE TABLE ClassificadoComo
 (
@@ -55,7 +55,7 @@ CREATE TABLE ClassificadoComo
 	GêneroID VARCHAR(30) NOT NULL,
 	FOREIGN KEY (JogoID) REFERENCES Jogo(JogoID),
 	FOREIGN KEY (GêneroID) REFERENCES Gênero(GêneroID)
-)
+);
 
 
 CREATE TABLE Joga
@@ -64,7 +64,7 @@ CREATE TABLE Joga
 	UsuárioID VARCHAR(30) NOT NULL,
 	FOREIGN KEY (JogoID) REFERENCES Jogo(JogoID),
 	FOREIGN KEY (UsuárioID) REFERENCES Usuário(UsuárioID)
-)
+);
 
 
 CREATE TABLE Distribui
@@ -73,7 +73,7 @@ CREATE TABLE Distribui
 	JogoID VARCHAR(30) NOT NULL,
 	FOREIGN KEY (EmpresaID) REFERENCES Empresa(EmpresaID),
 	FOREIGN KEY (JogoID) REFERENCES Jogo(JogoID)
-)
+);
 
 CREATE TABLE Aborda
 (
@@ -81,7 +81,7 @@ CREATE TABLE Aborda
 	JogoID VARCHAR(30) NOT NULL,
 	FOREIGN KEY (AvaliaçãoID) REFERENCES Avaliação(AvaliaçãoID),
 	FOREIGN KEY (JogoID) REFERENCES Jogo(JogoID)
-)
+);
 
 CREATE TABLE Sobre
 (
@@ -89,4 +89,4 @@ CREATE TABLE Sobre
 	AvaliaçãoID VARCHAR(30) NOT NULL,
 	FOREIGN KEY (NotíciaID) REFERENCES Notícia(NotíciaID),
 	FOREIGN KEY (AvaliaçãoID) REFERENCES Avaliação(AvaliaçãoID)
-)
+);
