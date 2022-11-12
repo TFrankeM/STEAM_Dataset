@@ -33,3 +33,5 @@ INSERT INTO Suporte VALUES ('U001', 'S01', 'José Carneiro', 'Meu fall guys est�
 INSERT INTO Empresa VALUES ('D1', 'Stonehold', 11412)
 
 INSERT INTO Distribui VALUES ('E03', 'J0002')
+
+INSERT INTO Avaliação VALUES('A111', 7, 0, );
