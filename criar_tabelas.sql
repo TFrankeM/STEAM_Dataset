@@ -149,11 +149,3 @@ CREATE TABLE Suporte
 	PRIMARY KEY (SuporteID),
 	FOREIGN KEY (UsuárioID) REFERENCES Usuário(UsuárioID)
 );
-
-CREATE TABLE Desenvolvedora
-(
-	EmpresaID VARCHAR(30) NOT NULL,
-	NomeEmpresa VARCHAR(30) NOT NULL,
-	NumSeguidores INT 
-	PRIMARY KEY (EmpresaID)
-)
