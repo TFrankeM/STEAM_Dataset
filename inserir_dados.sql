@@ -8,7 +8,7 @@ INSERT INTO Jogo VALUES('J0001', 56.90, 'Fazendinha', 'Stardew Valley', '2016', 
 
 INSERT INTO Jogo VALUES('J0002', 87.20, 'Tem o Mickey', 'Final Fantasy VI', '2018', 'Core i7', '14');
 
-INSERT INTO Conteúdo VALUES('CO01', 'INcríbelíssimo Spencer', '3MB', '42', 'CA01');
+INSERT INTO Conteúdo VALUES('CO01', 'INcríbelíssimo Spencer', '3MB', '42', 'CA01', 'U001');
 
 INSERT INTO Categoria VALUES('CA01', 'Ação');
 
