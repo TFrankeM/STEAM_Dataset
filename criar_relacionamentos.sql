@@ -36,9 +36,9 @@ CREATE TABLE InformeSobre
 CREATE TABLE Desenvolve
 (
 	JogoID VARCHAR(30) NOT NULL,
-	DesenvolvedorID VARCHAR(30) NOT NULL,
+	EmpresaID VARCHAR(30) NOT NULL,
 	FOREIGN KEY (JogoID) REFERENCES Jogo(JogoID),
-	FOREIGN KEY (DesenvolvedorID) REFERENCES Desenvolvedora(DesenvolvedorID)
+	FOREIGN KEY (EmpresaID) REFERENCES Empresa(EmpresaID)
 )
 
 CREATE TABLE Inclui
@@ -74,4 +74,3 @@ CREATE TABLE Distribui
 	FOREIGN KEY (EmpresaID) REFERENCES Empresa(EmpresaID),
 	FOREIGN KEY (JogoID) REFERENCES Jogo(JogoID)
 )
-
