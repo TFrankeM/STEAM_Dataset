@@ -79,7 +79,9 @@ CREATE TABLE Aquisição
 	PreçoAquisição FLOAT NOT NULL,
 	DataAquisição DATE NOT NULL,
 	Desconto FLOAT,
-	PRIMARY KEY (AquisiçãoID)
+	UsuárioID VARCHAR(30),
+	PRIMARY KEY (AquisiçãoID),
+	FOREIGN KEY (UsuárioID) REFERENCES Usuário(UsuárioID)
 );
 
 CREATE TABLE ItemJogo
