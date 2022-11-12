@@ -18,7 +18,7 @@ INSERT INTO Aquisição VALUES ('CPP123', 120.5, '2025-11-25', 10, 'U001');
 
 INSERT INTO ItemJogo VALUES ('IA1234', 0.27, 'Medalha do Conquistador', 'J0001', 'CPP123');
 
-INSERT INTO Notícia VALUES ('N2', 'Warframe', 'Concurso de Inverno', 123, '2020-01-23', 'CA01');
+INSERT INTO Notícia VALUES ('N2', 'Warframe', 'Concurso de Inverno', 123, '2020-01-23');
 
 INSERT INTO Gênero VALUES ('G1', 'Terror');
 
