@@ -88,5 +88,5 @@ CREATE TABLE Sobre
 	NotíciaID VARCHAR(30) NOT NULL,
 	AvaliaçãoID VARCHAR(30) NOT NULL,
 	FOREIGN KEY (NotíciaID) REFERENCES Notícia(NotíciaID),
-	FOREIGN KEY (AvaliaçãoID) REFERENCES Avaliação(AvaliaçãoID),)
+	FOREIGN KEY (AvaliaçãoID) REFERENCES Avaliação(AvaliaçãoID)
 )
