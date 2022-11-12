@@ -9,7 +9,7 @@ DROP TABLE InformeSobre;
 DROP TABLE Lê;
 DROP TABLE InterageEm;
 DROP TABLE Curte;
-DROP TABLE Desenvolvedora;
+DROP TABLE Empresa;
 DROP TABLE Suporte;
 DROP TABLE Comentário;
 DROP TABLE Fórum;
