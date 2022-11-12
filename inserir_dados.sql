@@ -10,8 +10,6 @@ INSERT INTO Jogo VALUES('J0001', 56.90, 'Fazendinha', 'Stardew Valley', '2016', 
 
 INSERT INTO Jogo VALUES('J0002', 87.20, 'Tem o Mickey', 'Final Fantasy VI', '2018', 'Core i7', '14');
 
-INSERT INTO BibliotecaDeJogos VALUES('U001', 'J0001');
-
 INSERT INTO ListaDeDesejos VALUES('U001', 'J0002');
 
 INSERT INTO Empresa VALUES ('E03', 'Blizzard', 200000);
@@ -20,7 +18,7 @@ INSERT INTO Aquisição VALUES ('CPP123', 120.5, '2025-11-25', 10, 'U001');
 
 INSERT INTO ItemJogo VALUES ('IA1234', 0.27, 'Medalha do Conquistador', 'J0001', 'CPP123');
 
-INSERT INTO Notícia VALUES ('N2', 'Warframe', 'Concurso de Inverno', 123, '2020-01-23');
+INSERT INTO Notícia VALUES ('N2', 'Warframe', 'Concurso de Inverno', 123, '2020-01-23', 'CA01');
 
 INSERT INTO Gênero VALUES ('G1', 'Terror');
 
