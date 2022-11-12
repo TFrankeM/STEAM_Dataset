@@ -16,7 +16,7 @@ INSERT INTO ListaDeDesejos VALUES('U001', 'J0002');
 
 INSERT INTO Empresa VALUES ('E03', 'Blizzard', 200000);
 
-INSERT INTO Aquisição VALUES ('CPP123', 120.5, '2025-11-25', 10);
+INSERT INTO Aquisição VALUES ('CPP123', 120.5, '2025-11-25', 10, 'U001');
 
 INSERT INTO ItemJogo VALUES ('IA1234', 0.27, 'Medalha do Conquistador', 'J0001', 'CPP123');
 
