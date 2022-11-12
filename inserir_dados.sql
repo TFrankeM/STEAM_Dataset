@@ -4,7 +4,7 @@ INSERT INTO Usuário VALUES ('U001', 'Salmoura', 'Jorge Silva', 'Tiradentes', 'M
 
 INSERT INTO Categoria VALUES('CA01', 'Ação');
 
-INSERT INTO Conteúdo VALUES('CO01', 'INcríbelíssimo Spencer', '3MB', '42');
+INSERT INTO Conteúdo VALUES('CO01', 'INcríbelíssimo Spencer', '3MB', '42', 'CA01');
 
 INSERT INTO Jogo VALUES('J0001', 56.90, 'Fazendinha', 'Stardew Valley', '2016', 'Core i5', '12');
 
