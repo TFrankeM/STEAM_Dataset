@@ -74,3 +74,19 @@ CREATE TABLE Distribui
 	FOREIGN KEY (EmpresaID) REFERENCES Empresa(EmpresaID),
 	FOREIGN KEY (JogoID) REFERENCES Jogo(JogoID)
 )
+
+CREATE TABLE Aborda
+(
+	AvaliaçãoID VARCHAR(30) NOT NULL,
+	JogoID VARCHAR(30) NOT NULL,
+	FOREIGN KEY (AvaliaçãoID) REFERENCES Avaliação(AvaliaçãoID),
+	FOREIGN KEY (JogoID) REFERENCES Jogo(JogoID)
+)
+
+CREATE TABLE Sobre
+(
+	NotíciaID VARCHAR(30) NOT NULL,
+	AvaliaçãoID VARCHAR(30) NOT NULL,
+	FOREIGN KEY (NotíciaID) REFERENCES Notícia(NotíciaID),
+	FOREIGN KEY (AvaliaçãoID) REFERENCES Avaliação(AvaliaçãoID),)
+)
