@@ -10,8 +10,6 @@ INSERT INTO Jogo VALUES('J0001', 56.90, 'Fazendinha', 'Stardew Valley', '2016', 
 
 INSERT INTO Jogo VALUES('J0002', 87.20, 'Tem o Mickey', 'Final Fantasy VI', '2018', 'Core i7', '14');
 
-INSERT INTO ListaDeDesejos VALUES('U001', 'J0002');
-
 INSERT INTO Empresa VALUES ('E03', 'Blizzard', 200000);
 
 INSERT INTO Aquisição VALUES ('CPP123', 120.5, '2025-11-25', 10, 'U001');
