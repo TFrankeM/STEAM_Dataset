@@ -67,18 +67,6 @@ CREATE TABLE Empresa
 	PRIMARY KEY (EmpresaID)
 );
 
-CREATE TABLE ItemJogo
-(
-	ItemID VARCHAR(30) NOT NULL,
-	ValorItem FLOAT NOT NULL,
-	NomeItem VARCHAR(30) NOT NULL,
-	JogoID VARCHAR(30) NOT NULL,
-	AquisiçãoID VARCHAR(30) NOT NULL,
-	PRIMARY KEY (ItemID),
-	FOREIGN KEY (JogoID) REFERENCES Jogo(JogoID)
-	FOREIGN KEY (AquisiçãoID) REFERENCES Aquisição(AquisiçãoID)
-);
-
 CREATE TABLE Notícia
 (
 	NotíciaID VARCHAR(30) NOT NULL,
@@ -98,7 +86,7 @@ CREATE TABLE Avaliação
 	DataAvaliação DATE NOT NULL,
 	InteraçõesPositivas INT,
 	InteraçõesNegativas INT,
-	UsuárioID VARCHAR(39) NOT NULL,
+	UsuárioID VARCHAR(30) NOT NULL,
 	PRIMARY KEY (AvaliaçãoID),
 	FOREIGN KEY (UsuárioID) REFERENCES Usuário(UsuárioID)
 );
@@ -110,6 +98,18 @@ CREATE TABLE Aquisição
 	DataAquisição DATE NOT NULL,
 	Desconto FLOAT,
 	PRIMARY KEY (AquisiçãoID)
+);
+
+CREATE TABLE ItemJogo
+(
+	ItemID VARCHAR(30) NOT NULL,
+	ValorItem FLOAT NOT NULL,
+	NomeItem VARCHAR(30) NOT NULL,
+	JogoID VARCHAR(30) NOT NULL,
+	AquisiçãoID VARCHAR(30) NOT NULL,
+	PRIMARY KEY (ItemID),
+	FOREIGN KEY (JogoID) REFERENCES Jogo(JogoID),
+	FOREIGN KEY (AquisiçãoID) REFERENCES Aquisição(AquisiçãoID)
 );
 
 CREATE TABLE Gênero
