@@ -1,5 +1,6 @@
 /*Excluir tabelas do nanco de dados da steam*/
 
+DROP TABLE Distribui;
 DROP TABLE Joga;
 DROP TABLE ClassificadoComo;
 DROP TABLE Inclui;
