@@ -25,7 +25,7 @@ CREATE TABLE Lê
 	FOREIGN KEY (NotíciaID) REFERENCES Notícia(NotíciaID)
 );
 
-CREATE TABLE InformeSobre
+CREATE TABLE InformaSobre
 (
 	NotíciaID VARCHAR(30) NOT NULL,
 	JogoID VARCHAR(30) NOT NULL,
