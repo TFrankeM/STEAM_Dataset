@@ -34,4 +34,4 @@ INSERT INTO Empresa VALUES ('D1', 'Stonehold', 11412)
 
 INSERT INTO Distribui VALUES ('E03', 'J0002')
 
-INSERT INTO Avaliação VALUES('A111', 7, 0, );
+INSERT INTO Avaliação VALUES('A111', 'Alguma coisa aleatóriaaaa', '2022-07-23', 7, 0, 'U001');
