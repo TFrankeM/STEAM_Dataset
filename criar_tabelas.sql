@@ -29,7 +29,7 @@ CREATE TABLE Conteúdo
 	CategoriaID VARCHAR(30) NOT NULL,
 	UsuárioID VARCHAR(30) NOT NULL,
 	PRIMARY KEY (ConteúdoID),
-	FOREIGN KEY (CategoriaID) REFERENCES Categoria(CategoriaID);
+	FOREIGN KEY (CategoriaID) REFERENCES Categoria(CategoriaID),
 	FOREIGN KEY (UsuárioID) REFERENCES Usuário(UsuárioID)
 );
 
