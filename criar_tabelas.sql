@@ -27,8 +27,10 @@ CREATE TABLE Conteúdo
 	ConteúdoTamanho VARCHAR(30) NOT NULL,
 	NumVisualizações VARCHAR(300),
 	CategoriaID VARCHAR(30) NOT NULL,
+	UsuárioID VARCHAR(30) NOT NULL,
 	PRIMARY KEY (ConteúdoID),
-	FOREIGN KEY (CategoriaID) REFERENCES Categoria(CategoriaID)
+	FOREIGN KEY (CategoriaID) REFERENCES Categoria(CategoriaID);
+	FOREIGN KEY (UsuárioID) REFERENCES Usuário(UsuárioID)
 );
 
 CREATE TABLE Jogo
