@@ -8,9 +8,9 @@ INSERT INTO Jogo VALUES('J0001', 56.90, 'Fazendinha', 'Stardew Valley', '2016', 
 
 INSERT INTO Jogo VALUES('J0002', 87.20, 'Tem o Mickey', 'Final Fantasy VI', '2018', 'Core i7', '14');
 
-INSERT INTO Conteúdo VALUES('CO01', 'INcríbelíssimo Spencer', '3MB', '42', 'CA01', 'U001');
-
 INSERT INTO Categoria VALUES('CA01', 'Ação');
+
+INSERT INTO Conteúdo VALUES('CO01', 'INcríbelíssimo Spencer', '3MB', '42', 'CA01', 'U001');
 
 INSERT INTO Empresa VALUES ('E03', 'Blizzard', 200000);
 
@@ -26,4 +26,4 @@ INSERT INTO Comentário VALUES ('TTT2', 'TTT21', 'PlayerNoob200', '2020-03-23', 
 
 INSERT INTO Suporte VALUES ('U001', 'S01', 'José Carneiro', 'Meu fall guys está crashando');
 
-INSERT INTO Notícia VALUES ('N2', 'Warframe', 'Concurso de Inverno', 123, '2020-01-23', 'CA01');
+INSERT INTO Notícia VALUES ('N2', 'Warframe', 'Concurso de Inverno', 123, '2020-01-23');
