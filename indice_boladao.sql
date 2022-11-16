@@ -2,6 +2,8 @@
 
 create nonclustered index ID_boladão on Aquisição (DataAquisição);
 
+/* Código que conta transações por data e as ordena */
+
 select count(*) as transações, dataaquisição from aquisição
 where dataaquisição between '2018-01-01' and '2021-12-31'
 group by dataaquisição
