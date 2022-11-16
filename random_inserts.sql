@@ -1,4 +1,4 @@
-
+/* Código que gera inserts aleatórios para a tabela Aquisição */
 
 DECLARE @AquisiçãoID varchar(30)
 DECLARE @PreçoAquisição int
