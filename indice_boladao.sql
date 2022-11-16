@@ -1,6 +1,6 @@
 /* Código que cria um nonclustered index para a tabela Aquisição */
 
-create nonclustered index ID_boladão on Aquisição (DataAquisição);
+create nonclustered index ID_boladão on Aquisição (DataAquisição DESC);
 
 /* Código que conta transações por data e as ordena */
 
