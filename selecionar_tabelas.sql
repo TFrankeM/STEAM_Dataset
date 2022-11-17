@@ -1,5 +1,5 @@
 select *
-from Aquisição, BibliotecaDeJogos, Categoria, ClassificadoComo, Comentário, Conteúdo, Curte, Desenvolve, Desenvolvedora, Empresa, Fórum, Gênero, Inclui, InformeSobre, InterageEm, ItemJogo, Joga, Jogo, Lê, ListaDeDesejos, Notícia, Suporte, Usuário
+from Aquisição, Avaliação, Categoria, ClassificadoComo, Comentário, Contém, Conteúdo, Curte, Desenvolve, Distribui, Empresa, Fórum, Gênero, Inclui, InformaSobre, InterageEm, ItemJogo, Joga, Jogo, Lê, Notícia, Suporte, Usuário
 go
 
 select *
@@ -8,10 +8,6 @@ go
 
 select *
 from Avaliação
-go
-
-select *
-from BibliotecaDeJogos
 go
 
 select *
@@ -27,6 +23,10 @@ from Comentário
 go
 
 select *
+from Contém
+go
+
+select *
 from Conteúdo
 go
 
@@ -39,7 +39,7 @@ from Desenvolve
 go
 
 select *
-from Desenvolvedora
+from Distribui
 go
 
 select *
@@ -59,7 +59,7 @@ from Inclui
 go
 
 select *
-from InformeSobre
+from InformaSobre
 go
 
 select *
@@ -80,10 +80,6 @@ go
 
 select *
 from Lê
-go
-
-select *
-from ListaDeDesejos
 go
 
 select *
