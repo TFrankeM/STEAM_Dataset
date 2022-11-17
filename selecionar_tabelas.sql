@@ -1,5 +1,5 @@
 select *
-from Aquisição, BibliotecaDeJogos, Categoria, ClassificadoComo, Comentário, Conteúdo, Curte, Desenvolve, Desenvolvedora, Empresa, Fórum, Gênero, Inclui, InformeSobre, InterageEm, ItemJogo, Joga, Jogo, Lê, ListaDeDesejos, Notícia, Suporte, Usuário
+from Aquisição, Categoria, ClassificadoComo, Comentário, Conteúdo, Curte, Desenvolve, Empresa, Fórum, Gênero, Inclui, InformaSobre, InterageEm, ItemJogo, Joga, Jogo, Lê, Notícia, Suporte, Usuário
 go
 
 select *
