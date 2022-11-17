@@ -11,10 +11,6 @@ from Avaliação
 go
 
 select *
-from BibliotecaDeJogos
-go
-
-select *
 from Categoria
 go
 
@@ -63,7 +59,7 @@ from Inclui
 go
 
 select *
-from InformeSobre
+from InformaSobre
 go
 
 select *
@@ -84,10 +80,6 @@ go
 
 select *
 from Lê
-go
-
-select *
-from ListaDeDesejos
 go
 
 select *
