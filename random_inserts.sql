@@ -13,7 +13,7 @@ declare @ToDate date = '2022-10-31'
 /* Declaramos algumas variáveis que usaremos e os limites da variável data */
 
 set @cont = 0
-WHILE ( @cont < 93 )
+WHILE ( @cont < 99993 )
 /* Loop que é limitado pelo contador e ocorre entre o while e o begin */
 BEGIN
 SELECT top 1 @UsuárioID = UsuárioID FROM Usuário ORDER BY NEWID() /* Seleciona um id da outra tabela usuário já existente */
