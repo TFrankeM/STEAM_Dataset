@@ -26,7 +26,7 @@ CREATE TABLE Conteúdo
 	ConteúdoID VARCHAR(30) NOT NULL,
 	TítuloConteúdo VARCHAR(300) NOT NULL,
 	TamanhoConteúdo VARCHAR(30) NOT NULL,
-	NúmeroVisualizações INT NOT NULL,
+	NúmeroVisualizações INT,
 	CategoriaID VARCHAR(30) NOT NULL,
 	UsuárioID VARCHAR(30) NOT NULL,
 	PRIMARY KEY (ConteúdoID),
@@ -40,7 +40,7 @@ CREATE TABLE Jogo
 	NomeJogo VARCHAR(30) NOT NULL,
 	PreçoJogo FLOAT NOT NULL,
 	DataDeLançamento DATE NOT NULL,
-	ClassificaçãoIndicativa INT NOT NULL,
+	ClassificaçãoIndicativa INT,
 	Descrição VARCHAR(300) NOT NULL,
 	PRIMARY KEY (JogoID) 
 );
@@ -57,7 +57,7 @@ CREATE TABLE Notícia
 (
 	NotíciaID VARCHAR(30) NOT NULL,
 	NotíciaTítulo VARCHAR(30) NOT NULL,
-	NúmeroInterações INT NOT NULL,
+	NúmeroInterações INT,
 	DataPublicação DATE NOT NULL,
 	Assunto VARCHAR(300) NOT NULL,
 	PRIMARY KEY (NotíciaID)
@@ -66,8 +66,8 @@ CREATE TABLE Notícia
 CREATE TABLE Avaliação
 (
 	AvaliaçãoID VARCHAR(30) NOT NULL,
-	Likes INT NOT NULL,
-	Dislikes INT NOT NULL,
+	Likes INT,
+	Dislikes INT,
 	DataAvaliação DATE NOT NULL,
 	ConteúdoAvaliação VARCHAR(300) NOT NULL,
 	UsuárioID VARCHAR(30) NOT NULL,
@@ -82,7 +82,7 @@ CREATE TABLE Avaliação
 CREATE TABLE Aquisição
 (
 	AquisiçãoID VARCHAR(30) NOT NULL,
-	PreçoAquisição FLOAT NOT NULL,
+	PreçoAquisição FLOAT,
 	DataAquisição DATE NOT NULL,
 	Desconto FLOAT,
 	UsuárioID VARCHAR(30) NOT NULL,
@@ -112,7 +112,7 @@ CREATE TABLE Fórum
 	NomeFórum VARCHAR(30) NOT NULL,
 	NomeDoCriador VARCHAR(30) NOT NULL,
 	DataCriação DATE NOT NULL,
-	NúmeroMembros INT NOT NULL,
+	NúmeroMembros INT,
 	PRIMARY KEY (FórumID)
 );
 
@@ -126,7 +126,6 @@ CREATE TABLE Comentário
 	PRIMARY KEY(ComentárioID),
 	FOREIGN KEY (FórumID) REFERENCES Fórum(FórumID)
 );
-
 
 CREATE TABLE Suporte
 (
